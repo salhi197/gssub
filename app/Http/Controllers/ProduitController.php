@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Produit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProduitController extends Controller
 {
@@ -44,9 +45,12 @@ class ProduitController extends Controller
      * @param  \App\Produit  $produit
      * @return \Illuminate\Http\Response
      */
-    public function show(Produit $produit)
+    public function show($id)
     {
-        //
+        $produit = DB::select('select pr.*,ph.path from produits pr ,  photos ph where pr.id=ph.id_produit and pr.id=?', [$id]);
+        // print_r(count($produit));
+        return view('single-product', ['produit' => $produit]);                
+
     }
 
     /**

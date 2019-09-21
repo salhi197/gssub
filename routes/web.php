@@ -17,11 +17,7 @@ Route::get('/', function () {
 Route::get('/produits', function () {
     return view('produits');
 });
-Route::get('/produits-1', function () {
-    return view('single-product');
-});
-
-
+Route::get('/produits-{id}','ProduitController@show');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

@@ -196,7 +196,7 @@
 
                                     <!-- Post Title -->
                                     <h4 class="post-title">
-										<a href="blog-single.html">Start-up Meet up</a>
+										<a href="{{route('single-product')}}">Start-up Meet up</a>
 									</h4>
                                     <!-- Text -->
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
@@ -206,7 +206,7 @@
                                     <span class="time">
 									<i class="fa fa-calendar"></i> April 05, 2016</span>
                                     <!-- Read More -->
-                                    <a class="read-more" href="blog-single.html"><i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- .post     -->
@@ -216,7 +216,7 @@
 
                                     <!-- Post Title -->
                                     <h4 class="post-title">
-										<a href="blog-single.html">App For Remainder</a>
+										<a href="{{route('single-product')}}">App For Remainder</a>
 									</h4>
                                     <!-- Text -->
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
@@ -226,7 +226,7 @@
                                     <span class="time">
 									<i class="fa fa-calendar"></i> March 15, 2016</span>
                                     <!-- Read More -->
-                                    <a class="read-more" href="blog-single.html"><i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- .post -->
@@ -236,7 +236,7 @@
 
                                     <!-- Post Title -->
                                     <h4 class="post-title">
-										<a href="blog-single.html">Technology Changed</a>
+										<a href="{{route('single-product')}}">Technology Changed</a>
 									</h4>
                                     <!-- Text -->
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
@@ -246,7 +246,7 @@
                                     <span class="time">
 									<i class="fa fa-calendar"></i> March 01, 2016</span>
                                     <!-- Read More -->
-                                    <a class="read-more" href="blog-single.html"><i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- .post -->
@@ -256,7 +256,7 @@
 
                                     <!-- Post Title -->
                                     <h4 class="post-title">
-										<a href="blog-single.html">Innovation Infra</a>
+										<a href="{{route('single-product')}}">Innovation Infra</a>
 									</h4>
                                     <!-- Text -->
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
@@ -266,7 +266,7 @@
                                     <span class="time">
 									<i class="fa fa-calendar"></i> February 07, 2016</span>
                                     <!-- Read More -->
-                                    <a class="read-more" href="blog-single.html"><i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- .post     -->
@@ -276,7 +276,7 @@
 
                                     <!-- Post Title -->
                                     <h4 class="post-title">
-										<a href="blog-single.html">New Business Goal</a>
+										<a href="{{route('single-product')}}">New Business Goal</a>
 									</h4>
                                     <!-- Text -->
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
@@ -286,7 +286,7 @@
                                     <span class="time">
 									<i class="fa fa-calendar"></i> January 15, 2016</span>
                                     <!-- Read More -->
-                                    <a class="read-more" href="blog-single.html"><i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- .post     -->
