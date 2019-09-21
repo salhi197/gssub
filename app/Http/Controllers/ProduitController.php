@@ -16,6 +16,15 @@ class ProduitController extends Controller
     public function index()
     {
         //
+        $produits = DB::select('
+SELECT pr.id AS id ,pr.nom as nom,pr.description as description,pr.prix as prix, (SELECT ph.path from photos AS ph 
+                            WHERE pr.id = ph.id_produit 
+                            LIMIT 1) AS path
+   FROM produits AS pr;
+        ');
+//        dd($produits);
+        return view('welcome', ['produits' => $produits]);
+
     }
 
     /**
@@ -45,13 +54,19 @@ class ProduitController extends Controller
      * @param  \App\Produit  $produit
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $produit = DB::select('select pr.*,ph.path from produits pr ,  photos ph where pr.id=ph.id_produit and pr.id=?', [$id]);
+    public function show($id){
+        $produit = DB::select('select pr.*,ph.path from produits pr ,  photos ph where pr.id=ph.id_produit and pr.id=?  ', [$id]);
         // print_r(count($produit));
-        return view('single-product', ['produit' => $produit]);                
-
+        return view('single-product', ['produit' => $produit]);
     }
+    //Haider 
+    public function showAll(){
+        $produits = DB::select('select * from produits');
+        print_r($produits);
+        return view('produits', ['produits' => $produits]);
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.

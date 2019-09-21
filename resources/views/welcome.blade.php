@@ -41,7 +41,24 @@
         <link href="css/colors/color1.css" id="changeable-colors" rel="stylesheet">
         <!-- Theme Options -->
         <link href="css/theme-options.css" rel="stylesheet">
+        <!-- map settings  -->
+        <!-- <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+            type="text/javascript" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+            type="text/javascript" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
+            type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css"
+            href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" /> -->
+            <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+            <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+            <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+            <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+            <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+
+
     </head>
+
     <body>
         <div id="page">
             <!-- Page Loader -->
@@ -190,122 +207,37 @@
                     </div>
                     <div class="row" data-animation="fadeInUp">
                         <div class="owl-carousel margin-15 navigation-1  text-left" data-pagination="false" data-items="4" data-autoplay="false" data-navigation="false">
+                        @foreach($produits as $produit)
                             <div class="item opacity icons-hover-color bottom-xs-pad-20 text-center">
-                                <img class="img-responsive" src="{{asset('img/produit-1.jpg')}}" alt="" width="400" height="230">
+                            <img class="img-responsive" src="{{ asset('Storage/'.$produit->path)}}" alt="" width="400" height="230px">
                                 <div class="description">
 
                                     <!-- Post Title -->
                                     <h4 class="post-title">
-										<a href="{{route('single-product')}}">Start-up Meet up</a>
+										<a href="{{route('single-product',['id'=>$produit->id])}}">{{$produit->nom}}</a>
 									</h4>
                                     <!-- Text -->
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+                                    <p>{{substr($produit->description,0,80)}}</p>
                                 </div>
-                                <div class="meta">
-                                    <!-- Meta Date -->
-                                    <span class="time">
-									<i class="fa fa-calendar"></i> April 05, 2016</span>
-                                    <!-- Read More -->
-                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
+                                <div class="add-to-cart">
+                                            <a href="shop.html#" class="btn btn-default btn-block"> Add to Cart <i class="fa fa-shopping-cart"></i></a>
+                                        </div>
                             </div>
-                            <!-- .post     -->
-                            <div class="item opacity icons-hover-color bottom-xs-pad-20 text-center">
-                                <img class="img-responsive" src="{{asset('img/produit-2.jpg')}}" alt="" width="400" height="230">
-                                <div class="description">
 
-                                    <!-- Post Title -->
-                                    <h4 class="post-title">
-										<a href="{{route('single-product')}}">App For Remainder</a>
-									</h4>
-                                    <!-- Text -->
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-                                </div>
-                                <div class="meta">
-                                    <!-- Meta Date -->
-                                    <span class="time">
-									<i class="fa fa-calendar"></i> March 15, 2016</span>
-                                    <!-- Read More -->
-                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                            <!-- .post -->
-                            <div class="item opacity icons-hover-color bottom-xs-pad-20 text-center">
-                                <img class="img-responsive" src="{{asset('img/produit-5.jpg')}}" alt="" width="400" height="230">
-                                <div class="description">
-
-                                    <!-- Post Title -->
-                                    <h4 class="post-title">
-										<a href="{{route('single-product')}}">Technology Changed</a>
-									</h4>
-                                    <!-- Text -->
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-                                </div>
-                                <div class="meta">
-                                    <!-- Meta Date -->
-                                    <span class="time">
-									<i class="fa fa-calendar"></i> March 01, 2016</span>
-                                    <!-- Read More -->
-                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                            <!-- .post -->
-                            <div class="item opacity icons-hover-color bottom-xs-pad-20 text-center">
-                                <img class="img-responsive" src="{{asset('img/produit-3.jpg')}}" alt="" width="400" height="230">
-                                <div class="description">
-
-                                    <!-- Post Title -->
-                                    <h4 class="post-title">
-										<a href="{{route('single-product')}}">Innovation Infra</a>
-									</h4>
-                                    <!-- Text -->
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-                                </div>
-                                <div class="meta">
-                                    <!-- Meta Date -->
-                                    <span class="time">
-									<i class="fa fa-calendar"></i> February 07, 2016</span>
-                                    <!-- Read More -->
-                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                            <!-- .post     -->
-                            <div class="item opacity icons-hover-color bottom-xs-pad-20 text-center">
-                                <img class="img-responsive" src="{{asset('img/produit-1.jpg')}}" alt="" width="400" height="230">
-                                <div class="description">
-
-                                    <!-- Post Title -->
-                                    <h4 class="post-title">
-										<a href="{{route('single-product')}}">New Business Goal</a>
-									</h4>
-                                    <!-- Text -->
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-                                </div>
-                                <div class="meta">
-                                    <!-- Meta Date -->
-                                    <span class="time">
-									<i class="fa fa-calendar"></i> January 15, 2016</span>
-                                    <!-- Read More -->
-                                    <a class="read-more" href="{{route('single-product')}}"><i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                            <!-- .post     -->
+                        @endforeach
                         </div>
                     </div>
                 </div>
             </section>
             <!-- news -->
-            <div id="get-quote" class="bg-color2 get-a-quote white text-left">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12" data-animation="fadeInLeft">
-                            <p class="desc1 no-margin text-center">We provide best consulting services. Meet our Experts and Get Free Consulting!
-                                <button class="btn lr-margin-40 btn-default top-margin-sm-20 inverse hblack" type="submit">Contact Now<i class="icon-envelop"></i></button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <section class="page-section">
+                <div class="col-md-12" id="map">
+                </div>            
+            </section>            
+
+
+
+
             <!-- request -->
             <footer id="footer">
                 <div class="footer-widget dark-bg white">
@@ -448,5 +380,7 @@ Abonnez-vous à la newsletter d'extranet afin de recevoir toutes les nouveautés
         <!-- Custom Js Code -->
         <script type="text/javascript" src="js/custom.js"></script>
         <!-- Scripts -->
+        <script type="text/javascript" src="js/map.js"></script>
+
     </body>
 </html>
